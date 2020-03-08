@@ -31,8 +31,14 @@ public class BuildManager : MonoBehaviour
         {
             isthatPlaced.Add(false);
         }
+    }
 
-        
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     public void SetUnitToBuild(GameObject unit)

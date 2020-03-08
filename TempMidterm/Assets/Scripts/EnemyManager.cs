@@ -28,7 +28,12 @@ public class EnemyManager : MonoBehaviour
             Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
             enemyNum++;
         }
-        
+        if (enemyNum >= 10 && enemyNum < 25)
+        {
+            timeBtwEnemy = .5f;
+            Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+            enemyNum++;
+        }
 
     }
 }
