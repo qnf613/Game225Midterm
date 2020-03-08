@@ -26,12 +26,13 @@ public class Hover : Singleton<Hover>
         }
     }
 
+    //activate the fnction that unit icon follows mouse cursor
     public void Activate(Sprite sprite)
     {
         this.spriterenderer.sprite = sprite;
         spriterenderer.enabled = true;
     }
-
+    //deactivate the fnction that unit icon follows mouse cursor
     public void Deactivate()
     {
         spriterenderer.enabled = false;

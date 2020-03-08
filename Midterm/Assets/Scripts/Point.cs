@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Script to generate the grid position
 public struct Point
 {   
     public int x { get; set; }
@@ -11,5 +12,15 @@ public struct Point
     {
         this.x = x;
         this.y = y;
+    }
+
+    public static bool operator ==(Point first, Point second)
+    {
+        return first.x == second.x && first.y == second.y;
+    }
+
+    public static bool operator !=(Point first, Point second)
+    {
+        return first.x != second.x || first.y != second.y;
     }
 }

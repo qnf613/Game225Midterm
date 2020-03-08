@@ -5,15 +5,17 @@ using System;
 
 public class LevelManager : Singleton<LevelManager>
 {
+    //an array of tilePrefebs, these are used for creating the tiles in the game
     [SerializeField] private GameObject[] tilePrefabs;
-
-    private Point HQ, enemySpawn;
-
+    //the maps transform, this is needed for adding new tiles
     [SerializeField] private Transform map;
-
+    //prefab for each of player H.Q. and enemy spawn, these are used for creating start and goal of enemy path 
     [SerializeField] private GameObject HQPrefab;
     [SerializeField] private GameObject enemySpawnPrefab;
-
+    //spawn points for the HQ, enemy spawn
+    private Point HQ, enemySpawn;
+    private Point mapSize;
+    //a property for returning the size of a tile
     public Dictionary<Point, TileScript> Tiles { get; set; }
     //calculates how big tiles are, this is used to place out tiles on the correct posistion
     //multiply tileSize by 3.1f because prefabs' scale is 3.1 for both x and y
@@ -22,7 +24,7 @@ public class LevelManager : Singleton<LevelManager>
         get { return tilePrefabs[0].GetComponent<SpriteRenderer>().sprite.bounds.size.x * 3.1f; }
     }
 
-    // Start is called before the first frame update
+    //Start is called before the first frame update
     void Start()
     {
         createLevel();
@@ -34,6 +36,8 @@ public class LevelManager : Singleton<LevelManager>
         Tiles = new Dictionary<Point, TileScript>();
         //A tmp instantioation of the tile map, we will use a text document to load this later.
         string[] mapData = ReadLevelText();
+
+        mapSize = new Point(mapData[0].ToCharArray().Length, mapData.Length);
         //calculates the map sizes
         int mapXSize = mapData[0].ToCharArray().Length; 
         int mapYSize = mapData.Length;
@@ -51,7 +55,6 @@ public class LevelManager : Singleton<LevelManager>
                 PlaceTile(newTiles[x].ToString(), x, y, worldStart);
             }
         }
-
         SpawnAndHQ();
     }
 
@@ -64,9 +67,6 @@ public class LevelManager : Singleton<LevelManager>
         TileScript newTile = Instantiate(tilePrefabs[tileIndex]).GetComponent<TileScript>();
         //uses the new tile to change the position of the tile
         newTile.SetUp(new Point(x, y), new Vector2(worldStart.x + (TileSize * x), worldStart.y - (TileSize * y)), map);
-
-        
-
     }
 
     //this is a method to read .txt file
@@ -77,15 +77,18 @@ public class LevelManager : Singleton<LevelManager>
         return tempData.Split('-');
     }
 
-    private void SpawnAndHQ()
+    public void SpawnAndHQ()
     {
+        //place enemy spawn at map
         enemySpawn = new Point(0, 0);
-        Instantiate(enemySpawnPrefab, Tiles[enemySpawn].GetComponent<TileScript>().WorldPos, Quaternion.identity);
-        //Instantiate(tilePrefabs[9], Tiles[enemySpawn].GetComponent<TileScript>().WorldPos, Quaternion.identity);
-        
+        GameObject eSpawn = (GameObject)Instantiate(enemySpawnPrefab, Tiles[enemySpawn].GetComponent<TileScript>().WorldPos, Quaternion.identity);
+        //place player H.Q. at map
         HQ = new Point(12, 4);
-        Instantiate(HQPrefab, Tiles[HQ].GetComponent<TileScript>().WorldPos, Quaternion.identity);
+        GameObject hq = (GameObject)Instantiate(HQPrefab, Tiles[HQ].GetComponent<TileScript>().WorldPos, Quaternion.identity);
+    }
 
-
+    public bool InBound(Point position)
+    {
+        return position.x >= 0 && position.y >= 0 && position.x < mapSize.x && position.y < mapSize.y;
     }
 }

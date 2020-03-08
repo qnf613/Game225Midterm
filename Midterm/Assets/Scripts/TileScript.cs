@@ -10,7 +10,6 @@ public class TileScript : MonoBehaviour
     private Color32 fullColor = new Color32(255, 118, 118, 255);
     private Color32 emptyColor = new Color32(96, 255, 90, 255);
     private SpriteRenderer spriteRenderer;
-
     public Vector2 WorldPos
     {
         get
@@ -43,8 +42,8 @@ public class TileScript : MonoBehaviour
 
     private void OnMouseOver()
     {
-       
-        if (!EventSystem.current.IsPointerOverGameObject() && GameManager.Instance.ClickedBtn != null)
+        if (!EventSystem.current.IsPointerOverGameObject() && GameManager.Instance.ClickedBtn != null
+            && gameObject.CompareTag("ground"))
         {
             if (IsEmpty)
             {
@@ -60,10 +59,17 @@ public class TileScript : MonoBehaviour
             {
                 PlaceUnit();
             }
-            //Line 55~62 description.
+            else if (Input.GetMouseButtonDown(1))
+            {
+                GameManager.Instance.ClickedBtn.deployed = false;
+            }
+            //Line 54~61 description.
             //No unit on tile -> IsEmpty = true-> PlaceUnit() is available
             //Unit on tile -> IsEmpty = float-> PlaceUnit() is unavilalbe.
             //Only one of the two if statements is to be true, so combined them by else if
+            //additional description for Line 62~65 (and I wasted more than 15 mins by writing this single line of code in another script. XD) 
+            //If you cancelled your selection before you placed that specific unit, you can select it again
+            //But, once you placed that unit, you will not be able to pick that unit.
         }
     }
 

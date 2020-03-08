@@ -6,6 +6,8 @@ public class UnitButton : MonoBehaviour
 {
     [SerializeField] private GameObject unitPrefab;
     [SerializeField] private Sprite sprite;
+    private SpriteRenderer spriteRenderer;
+    [SerializeField] public bool deployed = false;
 
     public GameObject UnitPrefab
     {
@@ -22,5 +24,18 @@ public class UnitButton : MonoBehaviour
         {
             return sprite;
         }
+    }
+
+    public bool Deployed
+    {
+        get
+        {
+            return deployed;
+        }
+    }
+
+    private void ColorTile(Color newColor)
+    {
+        spriteRenderer.color = newColor;
     }
 }

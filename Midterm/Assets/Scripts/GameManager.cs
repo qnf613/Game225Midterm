@@ -16,13 +16,18 @@ public class GameManager : Singleton<GameManager>
     // Update is called once per frame
     void Update()
     {
-        HandleEscape();
+        CancelSelect();
     }
 
     public void PickUnit(UnitButton unitbtn)
     {
-        this.ClickedBtn = unitbtn;
-        Hover.Instance.Activate(unitbtn.Sprite);
+        //this condition enables the player to pick a unit only if that unit is not deployed yet or the player is not picking up another unit
+        if (unitbtn.Deployed == false && GameManager.Instance.ClickedBtn == null)
+        {
+            this.ClickedBtn = unitbtn;
+            Hover.Instance.Activate(unitbtn.Sprite);
+            unitbtn.deployed = true;   
+        }
     }
 
     public void UnitPlaced()
@@ -30,11 +35,12 @@ public class GameManager : Singleton<GameManager>
         Hover.Instance.Deactivate();
     }
 
-    private void HandleEscape()
+    private void CancelSelect()
     {
         if (Input.GetMouseButtonDown(1))
         {
             Hover.Instance.Deactivate();
         }
     }
+
 }
