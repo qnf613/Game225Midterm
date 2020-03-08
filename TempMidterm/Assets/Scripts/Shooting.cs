@@ -6,6 +6,7 @@ public class Shooting : MonoBehaviour
 {
     public Transform target;
     public float speed = 70f;
+    public float dmg;
 
     public void Seek (Transform _target)
     {

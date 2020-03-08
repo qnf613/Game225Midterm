@@ -92,8 +92,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45a30d36f627f7d439b3c27e7d00732c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 15
-  fireRate: 1
+  range: 10
+  fireRate: 2
   thing2Rotate: {fileID: 426217568411574509}
   projectile: {fileID: 4301151776723131265, guid: 020cfd7cb4949fb40a86ed840857763b,
     type: 3}

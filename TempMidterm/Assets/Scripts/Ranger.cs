@@ -7,8 +7,8 @@ public class Ranger : MonoBehaviour
     private Transform target;
 
 
-    public float range = 15f;
-    public float fireRate = 1f;
+    public float range;
+    public float fireRate;
     private float fireCount = 0f;
 
     public Transform thing2Rotate;
