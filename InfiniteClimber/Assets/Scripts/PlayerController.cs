@@ -74,7 +74,6 @@ public class PlayerController : MonoBehaviour
         {
             rigid.velocity = new Vector2((-1 * maxSpeed), rigid.velocity.y);
         }
-
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -95,7 +94,7 @@ public class PlayerController : MonoBehaviour
         int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
         rigid.AddForce(new Vector2(dirc,1) * 5,ForceMode2D.Impulse);
         //call OutContact() to turn player back to normal state
-        Invoke("OutContact", 1);
+        Invoke("OutContact", .75f);
     }
     void OutContact()
     {
