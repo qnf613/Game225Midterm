@@ -6,11 +6,12 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float maxSpeed = 7.0f;
     [SerializeField] private float jumpPower = 12.0f;
+    private bool isContacted;
     Rigidbody2D rigid;
     SpriteRenderer spriteRenderer;
     Animator anima;
 
-    void Start()
+    void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -19,6 +20,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (isContacted == true)
+        {
+            Input.GetAxisRaw("Horizontal");
+            return;
+        }
         //animation direction   
         if (Input.GetButtonDown("Horizontal"))
         {
@@ -71,5 +77,30 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            InContact(collision.transform.position);
+        }    
+    }
+    void InContact(Vector2 targetPos)
+    {
+        isContacted = true;
+        //change layer to avoid additional contact while player being pushed
+        gameObject.layer = 11;
+        //display player got hit by enemy
+        spriteRenderer.color = new Color(1, 1, 1, .4f);
+        //reaction force
+        int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
+        rigid.AddForce(new Vector2(dirc,1) * 5,ForceMode2D.Impulse);
+        //call OutContact() to turn player back to normal state
+        Invoke("OutContact", 1);
+    }
+    void OutContact()
+    {
+        isContacted = false;
+        gameObject.layer = 10;
+        spriteRenderer.color = new Color(1, 1, 1, 1);
+    }
 }
