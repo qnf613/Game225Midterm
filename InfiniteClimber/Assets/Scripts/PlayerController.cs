@@ -81,8 +81,9 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             InContact(collision.transform.position);
-        }    
+        }
     }
+    
     void InContact(Vector2 targetPos)
     {
         isContacted = true;
@@ -92,7 +93,7 @@ public class PlayerController : MonoBehaviour
         spriteRenderer.color = new Color(1, 1, 1, .4f);
         //reaction force
         int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
-        rigid.AddForce(new Vector2(dirc,1) * 5,ForceMode2D.Impulse);
+        rigid.AddForce(new Vector2(dirc,1) * 5, ForceMode2D.Impulse);
         //call OutContact() to turn player back to normal state
         Invoke("OutContact", .75f);
     }

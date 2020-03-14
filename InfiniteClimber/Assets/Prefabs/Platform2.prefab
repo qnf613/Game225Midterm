@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5320131992605768094}
   - component: {fileID: 7149771798028811185}
-  - component: {fileID: 2092543846804214167}
+  - component: {fileID: 6263981031978913666}
   m_Layer: 8
   m_Name: Unity_Total_30
   m_TagString: Untagged
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083703782083016775}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.68, y: 1.2327676, z: 2.723079}
+  m_LocalPosition: {x: 1, y: 0, z: 1.684375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7142551872766499320}
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2092543846804214167
+--- !u!61 &6263981031978913666
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5710584594780251696}
   - component: {fileID: 6398106752402224894}
-  - component: {fileID: 752044643990126844}
+  - component: {fileID: 3122154607487529340}
   m_Layer: 8
   m_Name: Unity_Total_31
   m_TagString: Untagged
@@ -132,7 +132,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4347790425441316408}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.68, y: 1.2327676, z: 2.723079}
+  m_LocalPosition: {x: 0, y: 0, z: 1.684375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7142551872766499320}
@@ -187,7 +187,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &752044643990126844
+--- !u!61 &3122154607487529340
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -239,7 +239,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4701374813837234461}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.2327676, z: -2.723079}
+  m_LocalPosition: {x: 0, y: 0, z: -1.684375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6968227325671070626}
@@ -281,7 +281,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af16d1b31b1296542943ef5c953b1972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyPos: -7
+  destroyPosX: 5
+  destroyPosY: -5.5
 --- !u!1 &7646298777648319518
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,7 +293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6968227325671070626}
   - component: {fileID: 6788464875934618802}
-  - component: {fileID: 1423509997292734676}
+  - component: {fileID: 284156246988604925}
   m_Layer: 8
   m_Name: Unity_Total_29
   m_TagString: Untagged
@@ -308,7 +309,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7646298777648319518}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.68, y: 1.2327676, z: 2.723079}
+  m_LocalPosition: {x: -1, y: 0, z: 1.684375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7142551872766499320}
@@ -363,7 +364,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1423509997292734676
+--- !u!61 &284156246988604925
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

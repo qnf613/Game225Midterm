@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Destory : MonoBehaviour
 {
-    [SerializeField] private float destroyPos;
+    [SerializeField] private float destroyPosX;
+    [SerializeField] private float destroyPosY;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +16,16 @@ public class Destory : MonoBehaviour
     void Update()
     {
         //destroy when it get out of bottom boundary
-        if (gameObject.transform.position.y < destroyPos)
+        if (gameObject.transform.position.y < destroyPosY)
         {
             Destroy(gameObject);
         }
+
+        if (gameObject.transform.position.x > destroyPosX || gameObject.transform.position.x < -destroyPosX)
+        {
+            Destroy(gameObject);
+        }
+
 
         if (GameObject.Find("Player") == null)
         {

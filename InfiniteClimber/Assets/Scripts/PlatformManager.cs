@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlatformManager : MonoBehaviour
 {
     public GameObject[] platform;
-    private float spawnRangeX = 2.0f;
+    private float spawnRangeX = 3.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class PlatformManager : MonoBehaviour
     void SpawnPlatform()
     {
         int platformIndex = Random.Range(0, platform.Length);
-        Vector2 spawnPos = new Vector2((Random.Range(-spawnRangeX, spawnRangeX)-7.0f), 4);
+        Vector2 spawnPos = new Vector2(Random.Range(-spawnRangeX, spawnRangeX), 5);
         Instantiate(platform[platformIndex], spawnPos, platform[platformIndex].transform.rotation);
         Invoke("SpawnPlatform", Random.Range(1.7f, 2.2f));
     }

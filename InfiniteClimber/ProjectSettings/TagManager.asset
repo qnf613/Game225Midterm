@@ -8,6 +8,7 @@ TagManager:
   - SCoin
   - BCoin
   - Gcoin
+  - Boundary
   layers:
   - Default
   - TransparentFX
