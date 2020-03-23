@@ -7,7 +7,7 @@ TagManager:
   - Enemy
   - SCoin
   - BCoin
-  - Gcoin
+  - GCoin
   - Boundary
   layers:
   - Default
