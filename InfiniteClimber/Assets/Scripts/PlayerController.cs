@@ -100,6 +100,7 @@ public class PlayerController : MonoBehaviour
         //call OutContact() to turn player back to normal state
         Invoke("OutContact", .75f);
     }
+
     void OutContact()
     {
         isContacted = false;

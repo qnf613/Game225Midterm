@@ -1,15 +1,18 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BackGround
     - CameraScale
     - CoinGenerator
     - Destory
     - Enemy
     - EnemyManager
+    - GameOver
     - PlatformManager
     - PlayerController
     - Scenes
     - Scoring
+    - SoundManager
     - UIUpdate
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
@@ -44,6 +47,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
@@ -57,13 +64,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10740}
     - Class: 114
-      Script: {instanceID: 11240}
+      Script: {instanceID: 11068}
     - Class: 114
-      Script: {instanceID: 11506}
+      Script: {instanceID: 11242}
     - Class: 114
-      Script: {instanceID: 11634}
+      Script: {instanceID: 11510}
     - Class: 114
-      Script: {instanceID: 13656}
+      Script: {instanceID: 11638}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -103,6 +110,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -118,25 +129,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9860}
     - Class: 114
+      Script: {instanceID: 9900}
+    - Class: 114
       Script: {instanceID: 10166}
     - Class: 114
       Script: {instanceID: 10340}
     - Class: 114
       Script: {instanceID: 10664}
     - Class: 114
+      Script: {instanceID: 10740}
+    - Class: 114
       Script: {instanceID: 10962}
     - Class: 114
-      Script: {instanceID: 11240}
+      Script: {instanceID: 11068}
+    - Class: 114
+      Script: {instanceID: 11242}
     - Class: 114
       Script: {instanceID: 11278}
     - Class: 114
-      Script: {instanceID: 11360}
+      Script: {instanceID: 11282}
     - Class: 114
-      Script: {instanceID: 11634}
+      Script: {instanceID: 11364}
     - Class: 114
-      Script: {instanceID: 11678}
+      Script: {instanceID: 11510}
     - Class: 114
-      Script: {instanceID: 13656}
+      Script: {instanceID: 11638}
+    - Class: 114
+      Script: {instanceID: 11682}
+    - Class: 114
+      Script: {instanceID: 16950}
+    - Class: 114
+      Script: {instanceID: 24228}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -166,7 +189,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -177,22 +206,28 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9900}
     - Class: 114
+      Script: {instanceID: 10166}
+    - Class: 114
       Script: {instanceID: 10340}
     - Class: 114
       Script: {instanceID: 10740}
     - Class: 114
-      Script: {instanceID: 11240}
+      Script: {instanceID: 11068}
     - Class: 114
-      Script: {instanceID: 11506}
+      Script: {instanceID: 11242}
     - Class: 114
-      Script: {instanceID: 11634}
+      Script: {instanceID: 11278}
     - Class: 114
-      Script: {instanceID: 13656}
+      Script: {instanceID: 11510}
+    - Class: 114
+      Script: {instanceID: 11638}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -541,6 +576,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraScale
+  - hash:
+      serializedVersion: 2
       Hash: 3b760e6526e13f7504f59e210145899a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -569,6 +610,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: 71d54c7d0afaa797ecdabcb32844936d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BackGround
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -697,13 +744,19 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 86b3643acea07234b99ecc42a35f37fb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: CameraScale
+    className: SoundManager
+  - hash:
+      serializedVersion: 2
+      Hash: 5198bffb178d2e45c7462cc745840a6f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameOver
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/GamePlay.unity
   - Assets/Scenes/Credit.unity
-  playerPath: C:/Users/Eric/Downloads/test5/InfiniteClimber.exe
+  playerPath: C:/Users/Eric/Downloads/final/InfiniteClimber.exe

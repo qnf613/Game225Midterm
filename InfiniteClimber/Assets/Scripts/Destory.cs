@@ -25,11 +25,5 @@ public class Destory : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-
-        if (GameObject.Find("Player") == null)
-        {
-            Debug.Log("GameOver!");
-        }
     }
 }
