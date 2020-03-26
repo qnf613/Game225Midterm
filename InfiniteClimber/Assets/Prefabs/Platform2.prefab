@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyPosX: 5
-  destroyPosY: -5.5
+  destroyPosY: -6
 --- !u!1 &7646298777648319518
 GameObject:
   m_ObjectHideFlags: 0

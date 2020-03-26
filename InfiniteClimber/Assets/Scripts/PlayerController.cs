@@ -44,6 +44,8 @@ public class PlayerController : MonoBehaviour
         {
             rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             anima.SetBool("isJumping", true);
+            SoundManager.instance.PlayJump();
+
         }
         //Detect landing on platform & turn off jumping animation
         if (rigid.velocity.y < 0)
@@ -86,6 +88,7 @@ public class PlayerController : MonoBehaviour
     
     void InContact(Vector2 targetPos)
     {
+        SoundManager.instance.PlayDamaged();
         isContacted = true;
         //change layer to avoid additional contact while player being pushed
         gameObject.layer = 11;
@@ -93,7 +96,7 @@ public class PlayerController : MonoBehaviour
         spriteRenderer.color = new Color(1, 1, 1, .4f);
         //reaction force
         int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
-        rigid.AddForce(new Vector2(dirc,1) * 5, ForceMode2D.Impulse);
+        rigid.AddForce(new Vector2(dirc,1) * 4, ForceMode2D.Impulse);
         //call OutContact() to turn player back to normal state
         Invoke("OutContact", .75f);
     }

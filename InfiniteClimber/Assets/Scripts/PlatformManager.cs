@@ -39,7 +39,7 @@ public class PlatformManager : MonoBehaviour
             Invoke("SpawnPlatform", Random.Range(1.7f, 2.2f));
         }
 
-        else if (timer > 60.0f)
+        else
         {
             int platformIndex = Random.Range(2, 5);
             Vector2 spawnPos = new Vector2(Random.Range(-spawnRangeX, spawnRangeX), 5);

@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyPosX: 4
-  destroyPosY: -5.5
+  destroyPosY: -6
 --- !u!1 &3729373553865624774
 GameObject:
   m_ObjectHideFlags: 0
