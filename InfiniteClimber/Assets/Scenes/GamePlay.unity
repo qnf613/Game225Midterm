@@ -437,6 +437,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform:
   - {fileID: 6470375639660579664, guid: 4099e5f9fe6796d488f2c1ff438627df, type: 3}
+  - {fileID: 2716266263070822519, guid: d1a6f173eca8f45428cca945367bae96, type: 3}
+  - {fileID: 8614577490860643265, guid: 261f9763e3fb49e4b853bfeba8605ee4, type: 3}
   - {fileID: 4701374813837234461, guid: 75856606649eb134c9661db3f3c4f4aa, type: 3}
   - {fileID: 8019298054621874455, guid: 8e70ec4b0fd074c429b9b83cccf8e05a, type: 3}
   - {fileID: 2530900670597440702, guid: 477583c1f75a855409c1a73da083b9c9, type: 3}
