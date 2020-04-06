@@ -32,7 +32,7 @@ public class CoinGenerator : MonoBehaviour
     void SpawnCoin()
     {
         int coinIndex = Random.Range(0, coin.Length);
-        Vector2 spawnPos = new Vector2(Random.Range(-spawnRangeX, spawnRangeX), 5);
+        Vector2 spawnPos = new Vector2(Random.Range(-spawnRangeX, spawnRangeX), 6);
         Instantiate(coin[coinIndex], spawnPos, coin[coinIndex].transform.rotation);
         Invoke("SpawnCoin", Random.Range(start, end));
     }

@@ -28,12 +28,12 @@ public class PlatformManager : MonoBehaviour
             int platformIndex = Random.Range(0, 4);
             if (platformIndex == 1 || platformIndex == 2)
             {
-                Vector2 spawnPos = new Vector2(Random.Range(-1, 1), 5);
+                Vector2 spawnPos = new Vector2(Random.Range(-1, 1), 6);
                 Instantiate(platform[platformIndex], spawnPos, platform[platformIndex].transform.rotation);
             }
             else
             {
-                Vector2 spawnPos = new Vector2(Random.Range(-spawnRangeX, spawnRangeX), 5);
+                Vector2 spawnPos = new Vector2(Random.Range(-spawnRangeX, spawnRangeX), 6);
                 Instantiate(platform[platformIndex], spawnPos, platform[platformIndex].transform.rotation);
             }
             Invoke("SpawnPlatform", Random.Range(1.6f, 2.1f));
@@ -44,12 +44,12 @@ public class PlatformManager : MonoBehaviour
             int platformIndex = Random.Range(1, 4); 
             if (platformIndex == 1 || platformIndex == 2)
             {
-                Vector2 spawnPos = new Vector2(Random.Range(-1, 1), 5);
+                Vector2 spawnPos = new Vector2(Random.Range(-1, 1), 6);
                 Instantiate(platform[platformIndex], spawnPos, platform[platformIndex].transform.rotation);
             }
             else
             {
-                Vector2 spawnPos = new Vector2(Random.Range(-spawnRangeX, spawnRangeX), 5);
+                Vector2 spawnPos = new Vector2(Random.Range(-spawnRangeX, spawnRangeX), 6);
                 Instantiate(platform[platformIndex], spawnPos, platform[platformIndex].transform.rotation);
             }
             Invoke("SpawnPlatform", Random.Range(1.7f, 2.2f));
@@ -58,7 +58,7 @@ public class PlatformManager : MonoBehaviour
         else if (timer >= 61.0f && timer <= 90.0f)
         {
             int platformIndex = Random.Range(3, 6);
-            Vector2 spawnPos = new Vector2(Random.Range(-spawnRangeX, spawnRangeX), 5);
+            Vector2 spawnPos = new Vector2(Random.Range(-spawnRangeX, spawnRangeX), 6);
             Instantiate(platform[platformIndex], spawnPos, platform[platformIndex].transform.rotation);
             Invoke("SpawnPlatform", Random.Range(1.8f, 2.3f));
         }
@@ -66,7 +66,7 @@ public class PlatformManager : MonoBehaviour
         else
         {
             int platformIndex = Random.Range(4, 7);
-            Vector2 spawnPos = new Vector2(Random.Range(-spawnRangeX, spawnRangeX), 5);
+            Vector2 spawnPos = new Vector2(Random.Range(-spawnRangeX, spawnRangeX), 6);
             Instantiate(platform[platformIndex], spawnPos, platform[platformIndex].transform.rotation);
             Invoke("SpawnPlatform", Random.Range(2.0f, 2.5f));
         }

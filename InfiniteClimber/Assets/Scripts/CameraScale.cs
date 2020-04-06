@@ -8,7 +8,7 @@ public class CameraScale : MonoBehaviour
     {
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
 
-        Screen.SetResolution(480, 640, false);
+        Screen.SetResolution(360, 480, false);
 
     }
 }
