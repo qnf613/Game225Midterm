@@ -690,10 +690,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 58b647c5b2ec4184e9a07a561cdf0644, type: 3}
-    m_FontSize: 23
+    m_FontSize: 18
     m_FontStyle: 2
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -701,11 +701,27 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Visuals and basic tutorials (physics, A.I.) by GoldMetal (Korean YouTuber)\n\nCould
-    asset by pixelartmaker.com\n\nFonts by Jazz Create Games (Asset Store)\n\nSE by
-    MATTIX (coins), LittleRobotSoundFactory (damaged), and corpocracy (jump). All
-    from freesound.org  \n\nBGM by Mrthenoronha from freesound.org\n\n...and Special
-    Thanks to YOU!"
+  m_Text: 'Visuals and basic tutorials (physics, A.I.) by GoldMetal (Korean YouTuber)
+
+
+    Cloud asset by http://pixelartmaker.com/art/ec8f0b26a4645b2
+
+
+    Fonts by Jazz Create Games. https://assetstore.unity.com/packages/2d/fonts/bubble-font-free-version-24987
+
+
+    Coins SEs by MATTIX. https://freesound.org/people/MATTIX/
+
+
+    Damaged SE by LittleRobotSoundFactory. https://freesound.org/people/LittleRobotSoundFactory/
+
+
+    Jump SE by corpocracy. https://freesound.org/people/corpocracy/
+
+
+    BGMs by Slaking_97. https://freesound.org/people/Slaking_97/
+
+'
 --- !u!222 &1158470957
 CanvasRenderer:
   m_ObjectHideFlags: 0
