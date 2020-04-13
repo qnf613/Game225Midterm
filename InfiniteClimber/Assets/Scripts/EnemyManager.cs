@@ -6,6 +6,7 @@ public class EnemyManager : MonoBehaviour
 {
     public GameObject enemy;
     private float spawnRangeX = 3.0f;
+    private float spawnRangeY = 7.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class EnemyManager : MonoBehaviour
 
     void SpawnEnemy()
     {
-        Vector2 spawnPos = new Vector2((Random.Range(-spawnRangeX, spawnRangeX)), 6);
+        Vector2 spawnPos = new Vector2((Random.Range(-spawnRangeX, spawnRangeX)), spawnRangeY);
         Instantiate(enemy, spawnPos, enemy.transform.rotation);
         Invoke("SpawnEnemy", Random.Range(3.0f, 4.5f));
     }
